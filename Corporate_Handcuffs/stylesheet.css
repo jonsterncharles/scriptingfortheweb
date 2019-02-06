@@ -6,7 +6,6 @@ body{
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/happy_background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
   background-position: center;
   margin: 5vw;
   }
@@ -35,9 +34,6 @@ input {
   font-family: courier new;
   font-size: 2.5vw;
   text-align: center;
-  }
-audio{
-  width:50vw;
   }
 #contract {
   font-size: 0.5vw;
