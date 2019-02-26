@@ -1,0 +1,40 @@
+body{
+  width: auto;
+  text-align: center;
+  background-blend-mode: lighten;
+  background-image: url("images/happy_background.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("images/happy_background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 5vw;
+  }
+h1 {
+  font-size: 10vw;
+  font-family: comic sans ms;
+  font-weight: bold;
+  }
+p {
+  font-size: 3.5vw;
+  font-family: courier new;
+  font-weight: bold;
+  }
+form {
+  font-size: 3.5vw;
+  font-family: courier new;
+  font-weight: bold;
+  }
+button {
+  font-size: 3.5vw;
+  font-family: courier new;
+  font-weight: bold;
+  }
+input {
+  width: 30vw;
+  font-family: courier new;
+  font-size: 2.5vw;
+  text-align: center;
+  }
+#contract {
+  font-size: 0.5vw;
+  }
