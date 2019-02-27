@@ -1,57 +1,151 @@
 $(document).ready(function() {
 
-  //this var is added in step 9
-  // Let's set the AM and PM meridiem for 12 hour format instead of 24 hour time
-  var meridiem = "AM";  // Default is AM
+  var meridiemNY = "AM";
 
-  function displayTime() {
+  function displayTimeNY() {
 	   var currentTime = new Date();
-	   var hours = currentTime.getHours();
+	   var hoursNY = currentTime.getHours();
 	   var minutes = currentTime.getMinutes();
   	 var seconds = currentTime.getSeconds();
 
-     // If the seconds digit is less than ten  (this code from step 8)
      if (seconds < 10) {
-          // Add the "0" digit to the front
-          // so 9 becomes "09"
           seconds = "0" + seconds;
      }
-     // If the minutes digit is less than ten
+
      if (minutes < 10) {
           minutes = "0" + minutes;
      }
-     // If the hours digit is less than ten
-     if (hours < 10) {
-          hours = "0" + hours;
+
+     if (hoursNY < 10) {
+          hoursNY = "0" + hoursNY;
      }
 
-     //added in Step 9
-     // Convert from 24 hour to 12 hour format and keep track of the meridiem.
-    if (hours > 12) {
-      hours = hours - 12;
-      meridiem = "PM";
-    }
-    // 0 AM and 0 PM should read as 12
-    if (hours === 0) {
-        hours = 12;
+    if (hoursNY > 12) {
+      hoursNY = hoursNY - 12;
+      meridiemNY = "PM";
     }
 
+    if (hoursNY === 0) {
+        hoursNY = 12;
+    }
 
-  // This gets a "handle" to the clock div in our HTML
-  var clockDiv = document.getElementById('clock');
+  var clockDiv = document.getElementById('clockny');
 
-  // Then we set the text inside the clock div
-  // to the hours, minutes, and seconds of the current time
-  clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
-  }  //end of displayTime() function
+  clockDiv.innerText = "New York" + "\n" + hoursNY + ":" + minutes + ":" + seconds + " " + meridiemNY;
+  }
 
-  /* This section used in step 3 - 6
-  // This runs the displayTime function the first time
-  displayTime();
-  */
+  setInterval(displayTimeNY, 1000);
 
-  //runs once a second aka 1000 milliseconds, added in step 7
-  setInterval(displayTime, 1000);
+  var meridiemLA = "AM";
+
+  function displayTimeLA() {
+	   var currentTime = new Date();
+	   var hoursLA = currentTime.getHours();
+     hoursLA = hoursLA + 23;
+	   var minutes = currentTime.getMinutes();
+  	 var seconds = currentTime.getSeconds();
+
+     if (seconds < 10) {
+          seconds = "0" + seconds;
+     }
+
+     if (minutes < 10) {
+          minutes = "0" + minutes;
+     }
+
+     if (hoursLA < 10) {
+          hoursLA = "0" + hoursLA;
+     }
+
+    if (hoursLA > 12) {
+      hoursLA = hoursLA - 12;
+      meridiemLA = "PM";
+    }
+
+    if (hoursLA === 0) {
+        hoursLA = 12;
+    }
+
+  var clockDiv = document.getElementById('clockla');
+
+  clockDiv.innerText = "Los Angeles" + "\n" + hoursLA + ":" + minutes + ":" + seconds + " " + meridiemLA;
+  }
+
+  setInterval(displayTimeLA, 1000);
+
+  var meridiemTV = "AM";
+
+  function displayTimeTV() {
+     var currentTime = new Date();
+     var hoursTV = currentTime.getHours();
+     hoursTV= hoursTV + 7;
+     var minutes = currentTime.getMinutes();
+     var seconds = currentTime.getSeconds();
+
+     if (seconds < 10) {
+          seconds = "0" + seconds;
+     }
+
+     if (minutes < 10) {
+          minutes = "0" + minutes;
+     }
+
+     if (hoursTV < 10) {
+          hoursTV = "0" + hoursTV;
+     }
+
+    if (hoursTV > 12) {
+      hoursTV = hoursTV - 12;
+      meridiemTV = "PM";
+    }
+
+    if (hoursTV === 0) {
+        hoursTV = 12;
+    }
+
+  var clockDiv = document.getElementById('clocktelaviv');
+
+  clockDiv.innerText = "Tel Aviv" + "\n" + hoursTV + ":" + minutes + ":" + seconds + " " + meridiemTV;
+  }
+
+  setInterval(displayTimeTV, 1000);
+
+  var meridiemR = "AM";
+
+  function displayTimeR() {
+     var currentTime = new Date();
+     var hoursR = currentTime.getHours();
+     hoursR = hoursR + 2;
+     var minutes = currentTime.getMinutes();
+     var seconds = currentTime.getSeconds();
+
+     if (seconds < 10) {
+          seconds = "0" + seconds;
+     }
+
+     if (minutes < 10) {
+          minutes = "0" + minutes;
+     }
+
+     if (hoursR < 10) {
+          hoursR = "0" + hoursR;
+     }
+
+    if (hoursR > 12) {
+      hoursR = hoursR - 12;
+      meridiemR = "PM";
+    }
+
+    if (hoursR === 0) {
+        hoursR = 12;
+    }
+
+  var clockDiv = document.getElementById('clockrio');
+
+  clockDiv.innerText = "Rio de Janeiro" + "\n" + hoursR + ":" + minutes + ":" + seconds + " " + meridiemR;
+  }
+
+  setInterval(displayTimeR, 1000);
 
 
 
